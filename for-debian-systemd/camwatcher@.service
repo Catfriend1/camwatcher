@@ -1,0 +1,10 @@
+[Unit]
+Description=camwatcher
+After=tmp.mount
+
+[Service]
+User=root
+ExecStart=/bin/bash /etc/systemd/system/camwatcher.service.d/camwatcher.sh start %i
+
+[Install]
+WantedBy=multi-user.target
