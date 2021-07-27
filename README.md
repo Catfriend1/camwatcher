@@ -1,6 +1,12 @@
 # camwatcher
 camwatcher is a bash script systemd service to process mp4 videos from IP cameras and check if there was something useful recorded or just "leaves in the wind". If there's something useful, a Telegram push notification will be sent to a pre-defined group chat.
 
+# Verified working with
+- YI camera 1080p S/N BFUSY31
+- Debian 10 (buster) amd64
+
+# How to step-by-step to get you started
+
 I've just decided to contribute a script I have created to run on a Linux box that 100% fits the YI camera use case. The script can be run on Debian/Ubuntu/... based linux distros, raspberry pi and more. I'm using it with a Debian box to further analyze the "lot" content my YI cameras record and only send important motion detections to my Telegram group where my family members can se the alerts as JPG images and MP4 videos. The MP4 videos are also cutted down to only contain 3 seconds before the motion event, the event itself and 3 seconds after the motion event. If I'm away from my house and only have poor mobile connection to check the footage, I can look at the JPG image the script posted to the chat which is a lot less mobile data consumption than downloading the video footage.
 
 The script can be setup in an environment like this - just to show you the prerequisites.
